@@ -10,14 +10,14 @@ const Camp = () => {
   const slideLeft = () => {
     var slider: HTMLElement | null = document.getElementById("slider");
     if (slider) {
-      slider.scrollLeft = slider.scrollLeft - 1000;
+      slider.scrollLeft = slider.scrollLeft - 4000;
       setSlide((prev) => !prev);
     }
   };
   const slideRight = () => {
     var slider = document.getElementById("slider");
     if (slider) {
-      slider.scrollLeft = slider.scrollLeft + 1000;
+      slider.scrollLeft = slider.scrollLeft + 4000;
       setSlide((prev) => !prev);
     }
   };
@@ -25,12 +25,12 @@ const Camp = () => {
     <section className="2xl:max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
       {slide ? (
         <IoMdArrowDroprightCircle
-          className="fill-green-50 w-20 h-20 absolute mb-[32.5] top-[170px] lg:top-[200px] xl:top-[320px] right-0 cursor-pointer"
+          className="max-lg:hidden fill-green-50 w-20 h-20 absolute mb-[32.5] top-[170px] lg:top-[200px] xl:top-[320px] right-0 cursor-pointer"
           onClick={slideRight}
         />
       ) : (
         <IoMdArrowDropleftCircle
-          className="fill-green-50 w-20 h-20 absolute mb-[32.5] top-[170px] lg:top-[200px] xl:top-[320px] cursor-pointer"
+          className="max-lg:hidden fill-green-50 w-20 h-20 absolute mb-[32.5] top-[170px] lg:top-[200px] xl:top-[320px] cursor-pointer"
           onClick={slideLeft}
         />
       )}
